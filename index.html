@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e00e456026.js" crossorigin="anonymous"></script>
+    <title>DOM Checkpoint</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h3>Panier</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="article">Nom de l'article </th>
+                        <th class="Qty">Quantité</th>
+                        <th class="unit_price">Prix unitaire</th>
+                        <th class="total">Sous total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product">
+                            <div>
+                                <p class="title">Sac de riz</p>
+                                <p class="remove">supprimer</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty">
+                                <div class="minus"><img src="img/icon-minus.svg" alt=""></div>
+                                <input type="text" name="" id="" value="1" class="unity">
+                                <div class="plus"><img src="img/icon-plus.svg" alt=""></div>
+                            </div>
+                        </td>
+                        <td class="price_u">15000 fr</td>
+                        <td class="sous_total">15000 fr</td>
+                    </tr>
+                    <tr>
+                        <td class="product">
+                            <div>
+                                <p class="title">Stylo</p>
+                                <p class="remove">supprimer</p>
+                            </div>
+                        </td>
+                        <td class="quantity">
+                            <div class="qty">
+                                <div class="minus"><img src="img/icon-minus.svg" alt=""></div>
+                                <input type="text" name="" id="" value="1" class="unity">
+                                <div class="plus"><img src="img/icon-plus.svg" alt=""></div>
+                            </div>
+                        </td>
+                        <td class="price_u">100 fr</td>
+                        <td class="sous_total">100 fr</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <input type="text" name="" id="" class="input_article" placeholder="Nom de l'article">
+                        </td>
+                        <td><input type="number" name="" id="" class="price" placeholder="Prix"></td>
+                        <td></td>
+                        <td><button>Ajouter un article</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="footer">
+                <h4>Total : <span class="Total">0</span> </h4>
+            </div>
+        </div>
+    </div>
+    <script src="dom.js"></script>
+</body>
+
+</html>

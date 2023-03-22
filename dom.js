@@ -39,10 +39,19 @@ function sousT(a) {
 function addArticle() {
     let nameNewArticle = document.querySelector('.input_article');
     let priceNewArticle = document.querySelector('.price');
-    document.querySelector('tbody').innerHTML += '<tr><td class="product"><div><p class="title">' + nameNewArticle.value + '</p><p class="remove">supprimer</p></div></td><td><div class="qty"><div class="minus"><img src="img/icon-minus.svg" alt=""></div><input type="text" name="" id="" value="1" class="unity"><div class="plus"><img src="img/icon-plus.svg" alt=""></div></div></td><td class="price_u">' + priceNewArticle.value +' fr</td><td class="sous_total">' + priceNewArticle.value +' fr</td></tr>'
+    document.querySelector('tbody').innerHTML += '<tr><td class="product"><div><p class="title">' + nameNewArticle.value + '</p><p class="remove">supprimer</p></div></td><td><div class="qty"><div class="minus"><img src="img/icon-minus.svg" alt=""></div><input type="text" name="" id="" value="1" class="unity"><div class="plus"><img src="img/icon-plus.svg" alt=""></div></div></td><td class="price_u">' + priceNewArticle.value +' fr</td><td class="sous_total">' + priceNewArticle.value +' fr</td></tr>';
+    total();
+    nasco();
 }
 function total(){
     sumSousTotal.innerHTML = 0;
     let btnPrix = document.querySelectorAll(".sous_total");
     btnPrix.forEach((elt) => {sumSousTotal.innerHTML = parseInt(sumSousTotal.innerHTML) + parseInt(elt.innerHTML) + " fr"});
+}
+total()
+function nasco() {
+    let btnPlus = document.querySelectorAll('.plus');
+    let btnMinus = document.querySelectorAll('.minus');
+    btnPlus.forEach((btn) => {btn.addEventListener('click', increase);});
+    btnMinus.forEach((btn) => {btn.addEventListener('click', diminuer);});
 }
